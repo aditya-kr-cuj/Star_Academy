@@ -1,0 +1,16 @@
+{
+  "name": "Star Academy — Best Coaching Institute in Dashrath Puri, New Delhi",
+  "short_name": "Star Academy",
+  "description": "Premier coaching institute for IIT-JEE, NEET, Board Exams & Foundation courses (Class 6–12) in Dashrath Puri, New Delhi. Learn from IITian faculty.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#FF6B2B",
+  "icons": [
+    {
+      "src": "logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ]
+}

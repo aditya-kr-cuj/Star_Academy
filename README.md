@@ -1,1 +1,1 @@
-# Star_Academy
+# Star-Academy

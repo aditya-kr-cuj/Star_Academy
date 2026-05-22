@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials — Star Academy | Student & Parent Reviews</title>
+  <meta name="description" content="Read what students and parents say about Star Academy's coaching quality. Real testimonials from JEE aspirants, board exam students, and parents in Dashrath Puri, New Delhi.">
+  <meta name="keywords" content="Star Academy reviews, student testimonials, parent reviews Delhi, JEE coaching feedback, NEET coaching reviews">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0F172A">
+  <link rel="canonical" href="https://staracademy.co.in/testimonials.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://staracademy.co.in/testimonials.html">
+  <meta property="og:title" content="Testimonials — Star Academy | Student & Parent Reviews">
+  <meta property="og:description" content="Real testimonials from JEE aspirants, board exam students, and parents about Star Academy's elite coaching.">
+  <meta property="og:image" content="https://staracademy.co.in/logo.jpg">
+  <meta property="og:site_name" content="Star Academy">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Testimonials — Star Academy | Student & Parent Reviews">
+  <meta name="twitter:description" content="Real testimonials from JEE aspirants, board exam students, and parents about Star Academy's elite coaching.">
+  <meta name="twitter:image" content="https://staracademy.co.in/logo.jpg">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://staracademy.co.in/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Testimonials",
+        "item": "https://staracademy.co.in/testimonials.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="preload" as="image" href="logo.jpg">
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:       '#FF6B2B',
+            primaryLight:  '#FF8C55',
+            primaryDark:   '#E5581A',
+            secondary:     '#7C3AED',
+            secondaryLight:'#9F67FF',
+            darkBg:        '#0F172A',
+            cardBg:        '#1E293B',
+            accentGlow:    '#818CF8',
+            success:       '#10B981',
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Redesign Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* ─── DESIGN TOKENS ─── */
+    :root {
+      --primary:    #FF6B2B;
+      --secondary:  #7C3AED;
+      --accent:     #818CF8;
+      --bg-base:    #060912;
+      --text-head:  #F8FAFC;
+      --text-body:  #CBD5E1;
+      --text-muted: #94A3B8;
+      --text-faint: #64748B;
+      --card-bg:    rgba(10,15,30,0.72);
+      --card-border:rgba(255,255,255,0.08);
+    }
+
+    /* ─── PAGE BACKGROUND ─── */
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(160deg, #060912 0%, #0A0F1E 40%, #0F172A 100%);
+      min-height: 100vh;
+      background-attachment: fixed;
+    }
+
+    /* ─── SCROLL PROGRESS BAR ─── */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      z-index: 9999; transition: width 0.1s linear;
+      border-radius: 0 2px 2px 0;
+    }
+
+    /* ─── NAVBAR ─── */
+    [data-navbar] {
+      transition: background 0.5s, border-color 0.5s, box-shadow 0.5s, backdrop-filter 0.5s;
+    }
+    [data-navbar].scrolled,
+    [data-navbar].navbar-scrolled {
+      background: rgba(6,9,18,0.92) !important;
+      border-color: rgba(255,255,255,0.07) !important;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+    }
+
+    /* ─── NAV LINKS ─── */
+    .nav-link {
+      color: #94A3B8;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s;
+      padding-bottom: 4px;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute; bottom: -2px; left: 0; right: 0;
+      height: 2px; border-radius: 99px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .nav-link:hover { color: #F8FAFC; }
+    .nav-link:hover::after { transform: scaleX(1); }
+    .nav-link.active { color: #F8FAFC; }
+    .nav-link.active::after { transform: scaleX(1); }
+
+    /* ─── GRADIENT TEXT ─── */
+    .gradient-text {
+      background: linear-gradient(135deg, var(--primary) 0%, #FF8C55 50%, var(--secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ─── HAMBURGER ─── */
+    .hamburger-line {
+      display: block; width: 20px; height: 2px; margin: 3px 0;
+      background: #94A3B8; border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .hamburger.open .hamburger-line:nth-child(1),
+    .hamburger.active .hamburger-line:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open .hamburger-line:nth-child(2),
+    .hamburger.active .hamburger-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open .hamburger-line:nth-child(3),
+    .hamburger.active .hamburger-line:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* ─── MOBILE NAV ─── */
+    .mobile-nav {
+      position: fixed; inset: 0; z-index: 40;
+      background: rgba(6,9,18,0.97);
+      backdrop-filter: blur(24px);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transition: opacity 0.4s, visibility 0.4s;
+    }
+    .mobile-nav.open { opacity: 1; visibility: visible; pointer-events: auto; }
+
+    /* ─── ENROLL BTN ─── */
+    .enroll-btn {
+      cursor: pointer; border: none; outline: none;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+    }
+
+    /* ─── HERO ─── */
+    .hero-section {
+      position: relative; overflow: hidden;
+      min-height: auto;
+      padding: 144px 0 80px;
+    }
+    @media (max-width: 640px) {
+      .hero-section { padding: 130px 0 68px; }
+    }
+    .hero-orb {
+      position: absolute; border-radius: 50%;
+      filter: blur(80px); pointer-events: none;
+    }
+
+    /* ─── GLASS CARD ─── */
+    .glass-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.04) inset,
+        0 32px 80px rgba(0,0,0,0.5),
+        0 0 60px rgba(124,58,237,0.04);
+      transition: box-shadow 0.4s, transform 0.4s;
+    }
+    .glass-card:hover {
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.07) inset,
+        0 40px 100px rgba(0,0,0,0.6),
+        0 0 80px rgba(124,58,237,0.07);
+    }
+
+    /* ─── INNER LIGHT HIGHLIGHT ─── */
+    .glass-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+      border-radius: 24px 24px 0 0;
+      pointer-events: none;
+    }
+
+    /* ─── STAT BADGE ─── */
+    .stat-badge {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 20px; border-radius: 50px;
+      background: rgba(10,15,30,0.7);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    }
+    .stat-badge:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255,107,43,0.25);
+      box-shadow: 0 8px 30px rgba(255,107,43,0.08);
+    }
+    .stat-badge-icon {
+      width: 32px; height: 32px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; flex-shrink: 0;
+    }
+  </style>
+</head>
+<body class="bg-darkBg text-slate-100 font-sans antialiased overflow-x-hidden">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ===== 1. SCROLL PROGRESS BAR ===== -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ===== 2. NOTIFICATION BANNER ===== -->
+  <div class="notification-banner flex items-center justify-center" role="alert" aria-label="Announcement">
+    <div class="text-xs font-semibold tracking-widest uppercase mr-2 opacity-80">⭐</div>
+    <div class="text-sm font-medium tracking-wide">
+      Admissions Open for 2026 batches — Limited Seats! &nbsp;·&nbsp;
+      <a href="tel:+918102438480" class="font-bold underline underline-offset-2 hover:opacity-90 transition-opacity">Call +91 81024 38480</a>
+    </div>
+    <button class="notification-banner-close" aria-label="Dismiss banner">
+      <i class="fas fa-times text-xs" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <!-- ===== 3. STICKY NAVBAR ===== -->
+  <header data-navbar class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 w-full bg-transparent border-b border-transparent" style="padding-left:0;padding-right:0;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-[72px] lg:h-[84px]">
+      <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="Star Academy Home">
+        <div class="relative">
+          <div class="absolute inset-0 rounded-full bg-primary/20 blur-md group-hover:bg-primary/30 transition-all duration-500"></div>
+          <img src="logo.jpg" alt="Star Academy Logo" class="relative w-10 h-10 lg:w-11 lg:h-11 rounded-full object-cover ring-1 ring-white/20 group-hover:ring-primary/50 transition-all duration-300 z-10">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-base lg:text-lg font-bold gradient-text tracking-tight leading-none">Star Academy</span>
+          <span class="text-[10px] text-slate-500 font-medium tracking-widest uppercase leading-none mt-0.5">Coaching Institute</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 lg:gap-9" aria-label="Desktop navigation">
+        <a href="index.html" class="nav-link text-[13px] font-semibold tracking-wide">Home</a>
+        <a href="about.html" class="nav-link text-[13px] font-semibold tracking-wide">About Us</a>
+        <a href="courses.html" class="nav-link text-[13px] font-semibold tracking-wide">Courses</a>
+        <a href="testimonials.html" class="nav-link text-[13px] font-semibold tracking-wide active">Reviews</a>
+        <a href="contact.html" class="nav-link text-[13px] font-semibold tracking-wide">Contact</a>
+        <a href="feedback.html" class="nav-link text-[13px] font-semibold tracking-wide">Feedback</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button class="enroll-btn hidden md:inline-flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-primary to-secondary text-white font-bold text-[13px] rounded-full shadow-lg hover:shadow-primary/25 transition-all duration-300 hover:scale-105" style="letter-spacing:-0.01em;" onclick="window.open(&quot;https://forms.gle/t7oCHNZKW5ewT1hp7&quot;, &quot;_blank&quot;, &quot;noopener,noreferrer&quot;)">
+          <i class="fas fa-graduation-cap text-xs" aria-hidden="true"></i> Enroll Now
+        </button>
+        <button class="hamburger md:hidden w-9 h-9 flex flex-col justify-center items-center rounded-lg hover:bg-white/8 transition-colors" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav md:hidden" aria-label="Mobile navigation">
+    <nav class="flex flex-col items-center gap-8 text-center">
+      <a href="index.html" class="nav-link text-2xl font-bold">Home</a>
+      <a href="about.html" class="nav-link text-2xl font-bold">About Us</a>
+      <a href="courses.html" class="nav-link text-2xl font-bold">Courses</a>
+      <a href="testimonials.html" class="nav-link text-2xl font-bold active">Reviews</a>
+      <a href="contact.html" class="nav-link text-2xl font-bold">Contact</a>
+      <a href="feedback.html" class="nav-link text-2xl font-bold">Feedback</a>
+      <button class="enroll-btn mt-4 px-10 py-3.5 bg-gradient-to-r from-primary to-secondary text-white font-bold text-lg rounded-full" onclick="window.open(&quot;https://forms.gle/t7oCHNZKW5ewT1hp7&quot;, &quot;_blank&quot;, &quot;noopener,noreferrer&quot;)">Enroll Now</button>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <!-- ===== 4. HERO SECTION ===== -->
+    <section class="hero-section text-center relative border-b border-white/5">
+      <!-- Ambient Glow Orbs -->
+      <div class="hero-orb bg-primary/10 w-[400px] h-[400px] top-[-100px] left-[-100px]" aria-hidden="true"></div>
+      <div class="hero-orb bg-secondary/10 w-[400px] h-[400px] bottom-[-100px] right-[-100px]" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <!-- Badge -->
+        <p class="inline-flex items-center gap-2 text-accentGlow text-xs font-semibold uppercase tracking-widest mb-4">
+          <span class="w-6 h-px bg-accentGlow/50"></span>
+          Success Stories
+          <span class="w-6 h-px bg-accentGlow/50"></span>
+        </p>
+
+        <!-- Main Title -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 leading-[1.1] max-w-4xl mx-auto">
+          What Our <span class="gradient-text">Students Say</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-8 font-medium leading-relaxed">
+          Real experiences from students and parents who are part of the Star Academy family. Discover how our professional coaching paves the way for elite academic achievements.
+        </p>
+
+        <!-- Breadcrumb Nav -->
+        <nav class="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-2.5 rounded-full text-sm text-slate-400 font-medium" aria-label="Breadcrumb">
+          <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+          <span class="text-slate-600"><i class="fas fa-chevron-right text-[10px]" aria-hidden="true"></i></span>
+          <span class="text-slate-200">Testimonials</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ===== 5. STATS SUMMARY BAR ===== -->
+    <section class="py-10 sm:py-12 relative z-10 max-w-5xl mx-auto px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <!-- Stat Item 1 -->
+        <div class="stat-badge justify-center py-4 px-6">
+          <div class="stat-badge-icon bg-primary/10 text-primary">
+            <i class="fas fa-users"></i>
+          </div>
+          <div>
+            <div class="text-xl font-extrabold text-white tracking-tight leading-none">500+</div>
+            <div class="text-[10px] text-slate-500 font-bold uppercase tracking-wider mt-1">Students Guided</div>
+          </div>
+        </div>
+
+        <!-- Stat Item 2 -->
+        <div class="stat-badge justify-center py-4 px-6">
+          <div class="stat-badge-icon bg-yellow-500/10 text-yellow-400">
+            <i class="fas fa-star"></i>
+          </div>
+          <div>
+            <div class="text-xl font-extrabold text-white tracking-tight leading-none">4.9/5</div>
+            <div class="text-[10px] text-slate-500 font-bold uppercase tracking-wider mt-1">Average Rating</div>
+          </div>
+        </div>
+
+        <!-- Stat Item 3 -->
+        <div class="stat-badge justify-center py-4 px-6">
+          <div class="stat-badge-icon bg-success/10 text-success">
+            <i class="fas fa-award"></i>
+          </div>
+          <div>
+            <div class="text-xl font-extrabold text-white tracking-tight leading-none">95%</div>
+            <div class="text-[10px] text-slate-500 font-bold uppercase tracking-wider mt-1">Success Rate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. TESTIMONIALS GRID ===== -->
+    <section class="py-14 sm:py-16 relative z-10">
+      <div class="max-w-5xl mx-auto px-6">
+        <!-- Section Title -->
+        <div class="text-center mb-12 sm:mb-16 reveal">
+          <h2 class="text-3xl font-extrabold text-white tracking-tight mb-4">
+            Trusted by <span class="gradient-text">Parents &amp; Students</span>
+          </h2>
+          <p class="text-slate-400 max-w-lg mx-auto text-sm leading-relaxed">
+            Discover why Dashrath Puri trust Star Academy for quality IIT-JEE, NEET, and Board preparatory courses.
+          </p>
+          <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="glass-card p-8 relative flex flex-col justify-between overflow-hidden min-h-[260px] reveal hover:-translate-y-2">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <!-- Stars -->
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <!-- Quote Icon -->
+                <span class="text-3xl text-primary/20"><i class="fas fa-quote-right"></i></span>
+              </div>
+              <blockquote class="text-slate-300 font-medium text-sm leading-relaxed mb-6 italic">
+                "Star Academy has been a game changer for me. The IITian faculties made learning concepts so easy!"
+              </blockquote>
+            </div>
+            <div class="flex items-center gap-4 border-t border-white/5 pt-4">
+              <img src="student1.jpg" alt="Rahul Sharma" class="w-10 h-10 rounded-full object-cover ring-1 ring-white/20 shadow-md">
+              <div>
+                <h4 class="text-sm font-bold text-white leading-none">Rahul Sharma</h4>
+                <span class="text-xs text-slate-500 font-medium mt-1 inline-block">JEE Aspirant</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="glass-card p-8 relative flex flex-col justify-between overflow-hidden min-h-[260px] reveal hover:-translate-y-2">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <!-- Stars -->
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <!-- Quote Icon -->
+                <span class="text-3xl text-primary/20"><i class="fas fa-quote-right"></i></span>
+              </div>
+              <blockquote class="text-slate-300 font-medium text-sm leading-relaxed mb-6 italic">
+                "The foundation classes helped me build a strong base in Maths and Science. Highly recommended!"
+              </blockquote>
+            </div>
+            <div class="flex items-center gap-4 border-t border-white/5 pt-4">
+              <img src="student2.jpg" alt="Priya Verma" class="w-10 h-10 rounded-full object-cover ring-1 ring-white/20 shadow-md">
+              <div>
+                <h4 class="text-sm font-bold text-white leading-none">Priya Verma</h4>
+                <span class="text-xs text-slate-500 font-medium mt-1 inline-block">Class 9 Student</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="glass-card p-8 relative flex flex-col justify-between overflow-hidden min-h-[260px] reveal hover:-translate-y-2">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <!-- Stars -->
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <!-- Quote Icon -->
+                <span class="text-3xl text-primary/20"><i class="fas fa-quote-right"></i></span>
+              </div>
+              <blockquote class="text-slate-300 font-medium text-sm leading-relaxed mb-6 italic">
+                "My son improved tremendously after joining Star Academy. The teachers are very dedicated."
+              </blockquote>
+            </div>
+            <div class="flex items-center gap-4 border-t border-white/5 pt-4">
+              <img src="parent1.jpg" alt="Anil Kumar" class="w-10 h-10 rounded-full object-cover ring-1 ring-white/20 shadow-md">
+              <div>
+                <h4 class="text-sm font-bold text-white leading-none">Anil Kumar</h4>
+                <span class="text-xs text-slate-500 font-medium mt-1 inline-block">Parent</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="glass-card p-8 relative flex flex-col justify-between overflow-hidden min-h-[260px] reveal hover:-translate-y-2">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <!-- Stars -->
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <!-- Quote Icon -->
+                <span class="text-3xl text-primary/20"><i class="fas fa-quote-right"></i></span>
+              </div>
+              <blockquote class="text-slate-300 font-medium text-sm leading-relaxed mb-6 italic">
+                "The crash course was intense but super helpful. It really boosted my confidence for JEE Advanced."
+              </blockquote>
+            </div>
+            <div class="flex items-center gap-4 border-t border-white/5 pt-4">
+              <img src="student3.jpg" alt="Ankit Singh" class="w-10 h-10 rounded-full object-cover ring-1 ring-white/20 shadow-md">
+              <div>
+                <h4 class="text-sm font-bold text-white leading-none">Ankit Singh</h4>
+                <span class="text-xs text-slate-500 font-medium mt-1 inline-block">JEE Aspirant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. GOOGLE REVIEWS INCENTIVE STRIP ===== -->
+    <section class="py-10 sm:py-12 relative z-10">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="glass-card p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 reveal">
+          <div class="flex items-center gap-4 text-center sm:text-left">
+            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-primary text-xl shrink-0">
+              <i class="fab fa-google"></i>
+            </div>
+            <div>
+              <h3 class="text-base font-extrabold text-white">We're Highly Rated on Google Maps</h3>
+              <p class="text-xs text-slate-400 mt-1">Our average score is 4.9 out of 5 stars based on actual local guide reviews.</p>
+            </div>
+          </div>
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-full text-xs font-bold text-white border border-white/10 hover:border-primary/50 hover:bg-primary/5 transition-all">
+            Find Us on Google Maps <i class="fas fa-external-link-alt text-[10px]" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 8. PREMIUM CTA SECTION ===== -->
+    <section class="py-16 sm:py-20 relative overflow-hidden border-t border-white/5" style="background: linear-gradient(135deg, #060912 0%, #120A2C 100%);">
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-primary rounded-full filter blur-[100px]"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-secondary rounded-full filter blur-[100px]"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4 leading-tight">Want to Be Our Next Success Story?</h2>
+        <p class="text-base text-slate-400 mb-8 max-w-xl mx-auto">
+          Join Star Academy today and experience elite coaching, personal mentoring, and robust exam preparation.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://forms.gle/t7oCHNZKW5ewT1hp7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-white bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1">
+            Enroll Now <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
+          </a>
+          <a href="feedback.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-slate-300 border-2 border-white/10 hover:border-white/30 hover:text-white transition-all duration-300 hover:-translate-y-1">
+            Share Your Feedback <i class="fas fa-comment-dots text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 9. FOOTER ===== -->
+  <footer style="background: #060912; border-top: 1px solid rgba(255,255,255,0.05);" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <!-- Brand -->
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="logo.jpg" alt="Star Academy" class="w-10 h-10 rounded-full object-cover ring-1 ring-white/15">
+            <span class="text-lg font-bold gradient-text tracking-tight">Star Academy</span>
+          </div>
+          <p class="text-sm leading-relaxed mb-5" style="color: #64748B;">Premier coaching institute for IIT-JEE, NEET &amp; Board Exams by IITian faculty in Dashrath Puri, New Delhi.</p>
+          <div class="flex items-center gap-3">
+            <a href="https://wa.me/918102438480" aria-label="WhatsApp" class="w-8 h-8 rounded-lg flex items-center justify-center transition-all hover:scale-110" style="background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.2); color: #25D366;"><i class="fab fa-whatsapp text-xs" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-widest mb-5" style="color: #F8FAFC;">Quick Links</h4>
+          <div class="flex flex-col gap-3">
+            <a href="index.html" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Home</a>
+            <a href="about.html" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">About Us</a>
+            <a href="courses.html" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Courses</a>
+            <a href="testimonials.html" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Testimonials</a>
+            <a href="contact.html" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Contact Us</a>
+            <a href="feedback.html" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Feedback</a>
+          </div>
+        </div>
+        <!-- Courses -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-widest mb-5" style="color: #F8FAFC;">Our Courses</h4>
+          <div class="flex flex-col gap-3">
+            <a href="courses.html" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Foundation (Class 6–10)</a>
+            <a href="courses.html" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">IIT-JEE Coaching</a>
+            <a href="courses.html" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Board Exam Prep</a>
+            <a href="courses.html" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Crash Courses</a>
+          </div>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-widest mb-5" style="color: #F8FAFC;">Contact</h4>
+          <div class="flex flex-col gap-4">
+            <div class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-primary text-xs mt-1"></i>
+              <span class="text-sm leading-relaxed" style="color: #64748B;">A-12, Shop No-3, Gali No-1, Dasrath Puri, Near Shani Mandir, New Delhi-110045</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-phone-alt text-primary text-xs"></i>
+              <a href="tel:+918102438480" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">+91 81024 38480</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-envelope text-primary text-xs"></i>
+              <a href="mailto:swetakumari018@gmail.com" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">swetakumari018@gmail.com</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-clock text-primary text-xs"></i>
+              <span class="text-sm" style="color: #64748B;">Mon–Sat: 9:00 AM – 9:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3" style="border-top: 1px solid rgba(255,255,255,0.05);">
+        <p class="text-xs" style="color: #475569;">Copyright &copy; <span class="current-year"></span> Star Academy. All rights reserved.</p>
+        <p class="text-xs" style="color: #334155;">Developed by Aditya Kumar &bull; <a href="https://staracademy.co.in" class="hover:text-primary transition-colors">staracademy.co.in</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== 10. FLOATING ELEMENTS ===== -->
+  <a href="https://wa.me/918102438480" class="floating-whatsapp" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up text-sm" aria-hidden="true"></i></button>
+  <div class="mobile-cta-bar">
+    <a href="https://forms.gle/t7oCHNZKW5ewT1hp7" target="_blank" rel="noopener noreferrer" class="mobile-cta-btn mobile-cta-btn-primary"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Enroll Now</a>
+    <a href="tel:+918102438480" class="mobile-cta-btn mobile-cta-btn-secondary"><i class="fas fa-phone-alt" aria-hidden="true"></i> Call Now</a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="enroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0F172A">
+  <title>Feedback — Star Academy | Share Your Experience</title>
+  <link rel="canonical" href="https://staracademy.co.in/feedback.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://staracademy.co.in/feedback.html">
+  <meta property="og:title" content="Feedback — Star Academy | Share Your Experience">
+  <meta property="og:description" content="Share your experience with Star Academy. Your feedback helps us grow and serve our students better.">
+  <meta property="og:image" content="https://staracademy.co.in/logo.jpg">
+  <meta property="og:site_name" content="Star Academy">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Feedback — Star Academy | Share Your Experience">
+  <meta name="twitter:description" content="Share your experience with Star Academy. Help us improve our coaching.">
+  <meta name="twitter:image" content="https://staracademy.co.in/logo.jpg">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://staracademy.co.in/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Feedback",
+        "item": "https://staracademy.co.in/feedback.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+
+  <!-- Preload logo -->
+  <link rel="preload" as="image" href="logo.jpg">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:       '#FF6B2B',
+            primaryLight:  '#FF8C55',
+            primaryDark:   '#E5581A',
+            secondary:     '#7C3AED',
+            secondaryLight:'#9F67FF',
+            darkBg:        '#0F172A',
+            cardBg:        '#1E293B',
+            accentGlow:    '#818CF8',
+            success:       '#10B981',
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ─── DESIGN TOKENS ─── */
+    :root {
+      --announcement-height: 42px;
+      --navbar-height: 84px;
+      --primary:    #FF6B2B;
+      --secondary:  #7C3AED;
+      --accent:     #818CF8;
+      --bg-base:    #060912;
+      --text-head:  #F8FAFC;
+      --text-body:  #CBD5E1;
+      --text-muted: #94A3B8;
+      --text-faint: #64748B;
+      --card-bg:    rgba(10,15,30,0.75);
+      --card-border:rgba(255,255,255,0.08);
+    }
+    @media (max-width: 1023px) {
+      :root { --navbar-height: 72px; }
+    }
+
+    /* ─── PAGE BACKGROUND ─── */
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(160deg, #060912 0%, #0A0F1E 40%, #0F172A 100%);
+      min-height: 100vh;
+    }
+
+    /* ─── SCROLL PROGRESS BAR ─── */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      z-index: 9999; transition: width 0.1s linear;
+      border-radius: 0 2px 2px 0;
+    }
+
+    /* ─── NAVBAR ─── */
+    [data-navbar] {
+      top: var(--announcement-height) !important;
+      transition: background 0.5s, border-color 0.5s, box-shadow 0.5s, backdrop-filter 0.5s;
+    }
+    body.banner-dismissed [data-navbar] { top: 0 !important; }
+    [data-navbar].scrolled {
+      background: rgba(6,9,18,0.92) !important;
+      border-color: rgba(255,255,255,0.07) !important;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+    }
+    [data-navbar].navbar-scrolled {
+      background: rgba(6,9,18,0.92) !important;
+      border-color: rgba(255,255,255,0.07) !important;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+    }
+
+    /* ─── NAV LINKS ─── */
+    .nav-link {
+      color: #94A3B8;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s;
+      padding-bottom: 4px;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute; bottom: -2px; left: 0; right: 0;
+      height: 2px; border-radius: 99px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .nav-link:hover { color: #F8FAFC; }
+    .nav-link:hover::after { transform: scaleX(1); }
+    .nav-link.active { color: #F8FAFC; }
+    .nav-link.active::after { transform: scaleX(1); }
+
+    /* ─── GRADIENT TEXT ─── */
+    .gradient-text {
+      background: linear-gradient(135deg, var(--primary) 0%, #FF8C55 50%, var(--secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ─── HAMBURGER ─── */
+    .hamburger-line {
+      display: block; width: 20px; height: 2px; margin: 3px 0;
+      background: #94A3B8; border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .hamburger.open .hamburger-line:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open .hamburger-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open .hamburger-line:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* ─── MOBILE NAV ─── */
+    .mobile-nav {
+      position: fixed; inset: 0; z-index: 40;
+      background: rgba(6,9,18,0.97);
+      backdrop-filter: blur(24px);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transition: opacity 0.4s, visibility 0.4s;
+    }
+    .mobile-nav.open { opacity: 1; visibility: visible; pointer-events: auto; }
+
+    /* ─── ENROLL BTN ─── */
+    .enroll-btn {
+      cursor: pointer; border: none; outline: none;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+    }
+
+    /* ─── HERO ─── */
+    .hero-section {
+      position: relative; overflow: hidden;
+      padding: 160px 0 90px;
+    }
+    .hero-orb {
+      position: absolute; border-radius: 50%;
+      filter: blur(80px); pointer-events: none;
+    }
+
+    /* ─── GLASS CARD ─── */
+    .glass-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.04) inset,
+        0 32px 80px rgba(0,0,0,0.5),
+        0 0 60px rgba(124,58,237,0.04);
+      transition: box-shadow 0.4s, transform 0.4s;
+    }
+    .glass-card:hover {
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.07) inset,
+        0 40px 100px rgba(0,0,0,0.6),
+        0 0 80px rgba(124,58,237,0.07);
+    }
+
+    /* ─── INNER LIGHT HIGHLIGHT ─── */
+    .glass-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+      border-radius: 24px 24px 0 0;
+      pointer-events: none;
+    }
+
+    /* ─── STAT BADGE ─── */
+    .stat-badge {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 20px; border-radius: 50px;
+      background: rgba(10,15,30,0.7);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    }
+    .stat-badge:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255,107,43,0.25);
+      box-shadow: 0 8px 30px rgba(255,107,43,0.08);
+    }
+    .stat-badge-icon {
+      width: 32px; height: 32px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; flex-shrink: 0;
+    }
+
+    /* ─── FORM INPUTS ─── */
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-label {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+      text-transform: uppercase; color: #64748B;
+    }
+    .form-label span { color: var(--primary); }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      background: rgba(6,9,18,0.6);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 12px 16px;
+      color: #F8FAFC;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .form-input::placeholder, .form-textarea::placeholder {
+      color: #475569;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: rgba(255,107,43,0.45);
+      box-shadow: 0 0 0 3px rgba(255,107,43,0.1), 0 0 20px rgba(255,107,43,0.06);
+      background: rgba(6,9,18,0.85);
+    }
+    .form-input.is-invalid, .form-select.is-invalid, .form-textarea.is-invalid {
+      border-color: rgba(239,68,68,0.5) !important;
+      box-shadow: 0 0 0 3px rgba(239,68,68,0.1) !important;
+    }
+    .form-input.is-valid, .form-select.is-valid, .form-textarea.is-valid {
+      border-color: rgba(16,185,129,0.4) !important;
+      box-shadow: 0 0 0 3px rgba(16,185,129,0.08) !important;
+    }
+
+    /* Select arrow */
+    .select-wrapper { position: relative; }
+    .select-wrapper::after {
+      content: '\f107';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+      color: #64748B; pointer-events: none; font-size: 12px;
+    }
+
+    /* Textarea */
+    .form-textarea { resize: vertical; min-height: 120px; line-height: 1.6; }
+
+    /* Character counter */
+    .char-counter {
+      font-size: 11px; color: #475569; text-align: right;
+      transition: color 0.3s;
+    }
+    .char-counter.warn { color: #F59E0B; }
+    .char-counter.limit { color: #EF4444; }
+
+    /* Field hint */
+    .field-hint { font-size: 11px; color: #475569; margin-top: 4px; }
+
+    /* Error message */
+    .field-error { font-size: 11px; color: #EF4444; margin-top: 4px; display: none; }
+    .form-input.is-invalid ~ .field-error,
+    .form-select.is-invalid ~ .field-error,
+    .form-textarea.is-invalid ~ .field-error { display: block; }
+
+    /* ─── CONSENT CHECKBOX ─── */
+    .consent-label {
+      display: flex; align-items: flex-start; gap: 12px;
+      cursor: pointer;
+      font-size: 13px; color: #94A3B8; line-height: 1.5;
+    }
+    .consent-box {
+      width: 18px; height: 18px; border-radius: 5px; flex-shrink: 0;
+      background: rgba(6,9,18,0.6);
+      border: 1px solid rgba(255,255,255,0.12);
+      appearance: none; -webkit-appearance: none;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all 0.3s; margin-top: 1px;
+      position: relative;
+    }
+    .consent-box:checked {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-color: transparent;
+    }
+    .consent-box:checked::after {
+      content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+      font-size: 9px; color: white;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .consent-box.is-invalid { border-color: rgba(239,68,68,0.5) !important; }
+
+    /* ─── SUBMIT BUTTON ─── */
+    .submit-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; padding: 14px 32px;
+      background: linear-gradient(135deg, var(--primary) 0%, #FF8C55 50%, var(--secondary) 100%);
+      background-size: 200% 200%;
+      color: white; font-size: 15px; font-weight: 700;
+      border: none; border-radius: 14px; cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 8px 30px rgba(255,107,43,0.3);
+      letter-spacing: -0.01em;
+      position: relative; overflow: hidden;
+    }
+    .submit-btn::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+    .submit-btn:hover::before { transform: translateX(100%); }
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 50px rgba(255,107,43,0.4);
+      background-position: right center;
+    }
+    .submit-btn:active { transform: translateY(0); }
+    .submit-btn:disabled {
+      opacity: 0.65; cursor: not-allowed; transform: none;
+      box-shadow: none;
+    }
+
+    /* ─── FORM STATUS ─── */
+    .form-status {
+      border-radius: 12px; padding: 14px 18px;
+      font-size: 14px; font-weight: 500; display: none;
+      align-items: center; gap: 10px;
+    }
+    .form-status.success {
+      display: flex;
+      background: rgba(16,185,129,0.1);
+      border: 1px solid rgba(16,185,129,0.25);
+      color: #34D399;
+    }
+    .form-status.error {
+      display: flex;
+      background: rgba(239,68,68,0.1);
+      border: 1px solid rgba(239,68,68,0.2);
+      color: #F87171;
+    }
+
+    /* ─── WHY FEEDBACK MATTERS ─── */
+    .why-card {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 20px 24px; border-radius: 16px;
+      background: rgba(10,15,30,0.5);
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .why-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255,255,255,0.1);
+    }
+    .why-icon {
+      width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+
+    /* ─── BREADCRUMB ─── */
+    .breadcrumb { display: flex; align-items: center; gap: 8px; }
+    .breadcrumb a {
+      font-size: 12px; color: #64748B; text-decoration: none;
+      transition: color 0.3s;
+    }
+    .breadcrumb a:hover { color: var(--primary); }
+    .breadcrumb span { font-size: 12px; color: #334155; }
+    .breadcrumb-current { font-size: 12px; color: #94A3B8; }
+
+    /* ─── SECTION DIVIDER ─── */
+    .section-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 16px; border-radius: 50px;
+      background: rgba(255,107,43,0.1); border: 1px solid rgba(255,107,43,0.2);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--primary);
+    }
+
+    /* ─── REVEAL ANIMATIONS ─── */
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-left {
+      opacity: 0; transform: translateX(-28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+    /* ─── FLOATING WHATSAPP ─── */
+    .floating-whatsapp {
+      position: fixed; bottom: 28px; right: 28px; z-index: 900;
+      width: 54px; height: 54px; border-radius: 50%;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; color: white; text-decoration: none;
+      box-shadow: 0 8px 32px rgba(37,211,102,0.35);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: wa-pulse 3s infinite;
+    }
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+      box-shadow: 0 16px 40px rgba(37,211,102,0.45);
+    }
+    @keyframes wa-pulse {
+      0%, 100% { box-shadow: 0 8px 32px rgba(37,211,102,0.35); }
+      50%       { box-shadow: 0 8px 40px rgba(37,211,102,0.6); }
+    }
+
+    /* ─── BACK TO TOP ─── */
+    .back-to-top {
+      position: fixed; bottom: 28px; left: 28px; z-index: 900;
+      width: 42px; height: 42px; border-radius: 50%;
+      background: rgba(10,15,30,0.85); border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
+      color: #94A3B8; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transition: opacity 0.3s, visibility 0.3s, transform 0.3s, color 0.3s;
+      font-size: 14px;
+    }
+    .back-to-top.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .back-to-top:hover { transform: translateY(-3px); color: var(--primary); }
+
+    /* ─── MOBILE CTA BAR ─── */
+    .mobile-cta-bar {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 800;
+      padding: 10px 16px 16px;
+      background: rgba(6,9,18,0.95); backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      gap: 10px;
+    }
+    @media (max-width: 767px) {
+      .mobile-cta-bar { display: flex; }
+      body { padding-bottom: 80px; }
+    }
+    .mobile-cta-btn {
+      flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 16px; border-radius: 12px;
+      font-size: 13px; font-weight: 700; text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .mobile-cta-btn:active { transform: scale(0.97); }
+    .mobile-cta-btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white; box-shadow: 0 4px 20px rgba(255,107,43,0.3);
+    }
+    .mobile-cta-btn-secondary {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      color: #CBD5E1;
+    }
+
+    /* ─── FORM GRID ─── */
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 640px) {
+      .form-grid-2 { grid-template-columns: 1fr; }
+      .hero-section { padding: 130px 0 70px; }
+    }
+
+    /* ─── AMBIENT GLOW ─── */
+    .ambient-glow {
+      position: absolute; border-radius: 50%;
+      filter: blur(100px); pointer-events: none; z-index: 0;
+    }
+
+    /* ─── NOTIFICATION BANNER ─── */
+    .notification-banner {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 10000;
+      background: linear-gradient(90deg,
+        #E55A1B 0%, #FF6B2B 30%, #7C3AED 70%, #6025C7 100%);
+      color: #ffffff;
+      padding: 0.55rem 3rem 0.55rem 1rem;
+      text-align: center;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      transform: translateY(0);
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      box-shadow: 0 2px 20px rgba(255,107,43,0.3);
+    }
+    .notification-banner.hidden {
+      transform: translateY(-100%);
+    }
+    body.banner-dismissed .notification-banner {
+      display: none !important;
+    }
+    .notification-banner-close {
+      position: absolute;
+      right: 1rem; top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 0.85rem;
+      opacity: 0.85;
+      transition: opacity 0.2s, background 0.2s;
+      padding: 0.2rem 0.45rem;
+      line-height: 1;
+      border-radius: 4px;
+    }
+    .notification-banner-close:hover {
+      opacity: 1;
+      background: rgba(255,255,255,0.25);
+    }
+  </style>
+</head>
+
+<body class="bg-darkBg text-slate-100 font-sans antialiased overflow-x-hidden">
+
+
+  <!-- ═══════════════════════════════════════ SCROLL PROGRESS ═══ -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════ NOTIFICATION BANNER ═══ -->
+  <div id="announcement-banner" class="notification-banner" role="alert" aria-label="Announcement" aria-live="polite">
+    <div class="text-xs font-semibold tracking-widest uppercase opacity-80" aria-hidden="true">🎓</div>
+    <div class="text-sm font-medium tracking-wide">
+      New Batches Starting Soon! Limited Seats Available. &nbsp;·&nbsp;
+      <a href="tel:+918102438480" class="font-bold underline underline-offset-2 hover:opacity-90 transition-opacity">Call +91 81024 38480</a>
+    </div>
+    <button class="notification-banner-close" aria-label="Dismiss announcement banner">
+      <i class="fas fa-times text-xs" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <!-- ═══════════════════════════════════════ NAVBAR ═══════════ -->
+  <header data-navbar class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 w-full bg-transparent border-b border-transparent" style="padding-left:0;padding-right:0;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-[72px] lg:h-[84px]">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="Star Academy Home">
+        <div class="relative">
+          <div class="absolute inset-0 rounded-full bg-primary/20 blur-md group-hover:bg-primary/30 transition-all duration-500"></div>
+          <img src="logo.jpg" alt="Star Academy Logo" class="relative w-10 h-10 lg:w-11 lg:h-11 rounded-full object-cover ring-1 ring-white/20 group-hover:ring-primary/50 transition-all duration-300 z-10">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-base lg:text-lg font-bold gradient-text tracking-tight leading-none">Star Academy</span>
+          <span class="text-[10px] text-slate-500 font-medium tracking-widest uppercase leading-none mt-0.5">Coaching Institute</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-7 lg:gap-9" aria-label="Desktop navigation">
+        <a href="index.html"        class="nav-link text-[13px] font-semibold tracking-wide">Home</a>
+        <a href="about.html"        class="nav-link text-[13px] font-semibold tracking-wide">About Us</a>
+        <a href="courses.html"      class="nav-link text-[13px] font-semibold tracking-wide">Courses</a>
+        <a href="testimonials.html" class="nav-link text-[13px] font-semibold tracking-wide">Reviews</a>
+        <a href="contact.html"      class="nav-link text-[13px] font-semibold tracking-wide">Contact</a>
+        <a href="feedback.html"     class="nav-link active text-[13px] font-semibold tracking-wide">Feedback</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button class="enroll-btn hidden md:inline-flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-primary to-secondary text-white font-bold text-[13px] rounded-full shadow-lg hover:shadow-primary/25 transition-all duration-300 hover:scale-105" style="letter-spacing:-0.01em;" onclick="window.open(&quot;https://forms.gle/t7oCHNZKW5ewT1hp7&quot;, &quot;_blank&quot;, &quot;noopener,noreferrer&quot;)">
+          <i class="fas fa-graduation-cap text-xs"></i> Enroll Now
+        </button>
+        <button class="hamburger md:hidden w-9 h-9 flex flex-col justify-center items-center rounded-lg hover:bg-white/8 transition-colors" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav md:hidden" aria-label="Mobile navigation">
+    <nav class="flex flex-col items-center gap-8 text-center">
+      <a href="index.html"        class="nav-link text-2xl font-bold">Home</a>
+      <a href="about.html"        class="nav-link text-2xl font-bold">About Us</a>
+      <a href="courses.html"      class="nav-link text-2xl font-bold">Courses</a>
+      <a href="testimonials.html" class="nav-link text-2xl font-bold">Reviews</a>
+      <a href="contact.html"      class="nav-link text-2xl font-bold">Contact</a>
+      <a href="feedback.html"     class="nav-link active text-2xl font-bold">Feedback</a>
+      <button class="enroll-btn mt-4 px-10 py-3.5 bg-gradient-to-r from-primary to-secondary text-white font-bold text-lg rounded-full" onclick="window.open(&quot;https://forms.gle/t7oCHNZKW5ewT1hp7&quot;, &quot;_blank&quot;, &quot;noopener,noreferrer&quot;)">Enroll Now</button>
+    </nav>
+  </div>
+
+  <!-- ═══════════════════════════════════════ HERO ══════════════ -->
+  <section class="hero-section" aria-labelledby="hero-heading">
+    <!-- Ambient orbs -->
+    <div class="ambient-glow" style="width:500px;height:500px;top:-150px;left:-150px;background:radial-gradient(circle,rgba(255,107,43,0.07),transparent 70%);"></div>
+    <div class="ambient-glow" style="width:600px;height:600px;top:-100px;right:-200px;background:radial-gradient(circle,rgba(124,58,237,0.07),transparent 70%);"></div>
+    <div class="ambient-glow" style="width:400px;height:400px;bottom:-100px;left:50%;transform:translateX(-50%);background:radial-gradient(circle,rgba(129,140,248,0.05),transparent 70%);"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 text-center">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb justify-center mb-8 reveal" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true"><i class="fas fa-chevron-right text-[9px]"></i></span>
+        <span class="breadcrumb-current" aria-current="page">Feedback</span>
+      </nav>
+
+      <!-- Tag -->
+      <div class="flex justify-center mb-6 reveal reveal-delay-1">
+        <span class="section-tag">
+          <i class="fas fa-star text-[10px]"></i> Share Your Experience
+        </span>
+      </div>
+
+      <!-- Headline -->
+      <h1 id="hero-heading" class="reveal reveal-delay-2 font-black leading-[1.08] tracking-tight mb-6" style="font-size:clamp(2.4rem,6vw,4rem);letter-spacing:-0.03em;color:#F8FAFC;">
+        Share Your<br>
+        <span class="gradient-text">Experience</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="reveal reveal-delay-3 mx-auto max-w-xl leading-relaxed" style="font-size:clamp(1rem,2.2vw,1.15rem);color:#94A3B8;">
+        Your feedback helps us grow and serve our students better.
+        <br class="hidden sm:block">Every word you share shapes tomorrow's classroom.
+      </p>
+
+      <!-- Decorative line -->
+      <div class="reveal reveal-delay-4 flex justify-center mt-8">
+        <div class="h-px w-24" style="background:linear-gradient(90deg,transparent,rgba(255,107,43,0.4),transparent);"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ MAIN CONTENT ════ -->
+  <main id="main-content" class="relative pb-24">
+    <!-- Ambient glow mid-page -->
+    <div class="ambient-glow" style="width:700px;height:700px;top:200px;left:50%;transform:translateX(-50%);background:radial-gradient(circle,rgba(124,58,237,0.05),transparent 70%);pointer-events:none;"></div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-6 lg:px-10">
+
+      <!-- ─── STAT BADGES ─── -->
+      <div class="reveal flex flex-wrap justify-center gap-3 mb-10">
+
+        <!-- Rating -->
+        <div class="stat-badge">
+          <div class="stat-badge-icon" style="background:rgba(255,107,43,0.12);color:#FF6B2B;">
+            <i class="fas fa-star"></i>
+          </div>
+          <div>
+            <p class="text-[13px] font-bold" style="color:#F8FAFC;letter-spacing:-0.01em;">4.9★ Average Rating</p>
+            <p class="text-[11px]" style="color:#64748B;">From verified students</p>
+          </div>
+        </div>
+
+        <!-- Reviews -->
+        <div class="stat-badge">
+          <div class="stat-badge-icon" style="background:rgba(124,58,237,0.12);color:#9F67FF;">
+            <i class="fas fa-comments"></i>
+          </div>
+          <div>
+            <p class="text-[13px] font-bold" style="color:#F8FAFC;letter-spacing:-0.01em;">500+ Reviews</p>
+            <p class="text-[11px]" style="color:#64748B;">Real experiences shared</p>
+          </div>
+        </div>
+
+        <!-- Privacy -->
+        <div class="stat-badge">
+          <div class="stat-badge-icon" style="background:rgba(16,185,129,0.12);color:#10B981;">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <div>
+            <p class="text-[13px] font-bold" style="color:#F8FAFC;letter-spacing:-0.01em;">100% Privacy</p>
+            <p class="text-[11px]" style="color:#64748B;">Your data is safe with us</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── FORM CARD ─── -->
+      <div class="glass-card relative overflow-hidden reveal reveal-delay-1 p-8 md:p-10">
+
+        <!-- Card top glow accent -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-px" style="background:linear-gradient(90deg,transparent,rgba(255,107,43,0.5),transparent);"></div>
+
+        <!-- Card header -->
+        <div class="mb-8 text-center">
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-4" style="background:linear-gradient(135deg,rgba(255,107,43,0.15),rgba(124,58,237,0.15));border:1px solid rgba(255,107,43,0.2);">
+            <i class="fas fa-pen-to-square text-xl" style="color:#FF6B2B;"></i>
+          </div>
+          <h2 class="text-xl font-bold mb-1" style="color:#F8FAFC;letter-spacing:-0.02em;">We'd Love to Hear From You</h2>
+          <p class="text-sm" style="color:#64748B;">Takes less than 2 minutes · All fields marked <span style="color:#FF6B2B;">*</span> are required</p>
+        </div>
+
+        <!-- ─── THE FORM ─── -->
+        <form
+          class="js-validated-form space-y-6"
+          action="https://formsubmit.co/aditya.kumar271105@gmail.com"
+          method="POST"
+          novalidate
+        >
+          <!-- Hidden fields -->
+          <input type="hidden" name="_subject" value="New Website Feedback - Star Academy">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <!-- Re-activation fix: redirect back to this page after submit -->
+          <input type="hidden" name="_next" value="https://staracademy.co.in/feedback.html?sent=1">
+          <!-- Auto-reply to the student who submitted the form -->
+          <input type="hidden" name="_autoresponse" value="Thank you for sharing your feedback with Star Academy! Your response has been recorded and we truly appreciate your time. For any queries, call us at +91 81024 38480.">
+
+          <!-- Row 1: Name + Role -->
+          <div class="form-grid-2">
+            <!-- Full Name -->
+            <div class="form-group">
+              <label class="form-label" for="feedbackName">Full Name <span>*</span></label>
+              <input
+                class="form-input"
+                id="feedbackName"
+                name="full_name"
+                type="text"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                minlength="3"
+                maxlength="60"
+                pattern="^[A-Za-z][A-Za-z\s'.-]{2,59}$"
+                required
+              >
+              <span class="field-error">Please enter a valid name (letters only, 3–60 chars).</span>
+            </div>
+
+            <!-- Role -->
+            <div class="form-group">
+              <label class="form-label" for="feedbackRole">You Are a <span>*</span></label>
+              <div class="select-wrapper">
+                <select class="form-select" id="feedbackRole" name="role" required>
+                  <option value="">Select role</option>
+                  <option value="Student">Student</option>
+                  <option value="Parent">Parent</option>
+                  <option value="Guardian">Guardian</option>
+                </select>
+              </div>
+              <span class="field-error">Please select your role.</span>
+            </div>
+          </div>
+
+          <!-- Row 2: Phone + Email -->
+          <div class="form-grid-2">
+            <!-- Phone -->
+            <div class="form-group">
+              <label class="form-label" for="feedbackPhone">Phone Number <span>*</span></label>
+              <input
+                class="form-input"
+                id="feedbackPhone"
+                name="phone"
+                type="tel"
+                placeholder="10-digit mobile number"
+                inputmode="numeric"
+                autocomplete="tel"
+                maxlength="10"
+                pattern="^[0-9]{10}$"
+                data-phone="true"
+                required
+              >
+              <span class="field-error">Enter a valid 10-digit mobile number.</span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label class="form-label" for="feedbackEmail">Email Address <span>*</span></label>
+              <input
+                class="form-input"
+                id="feedbackEmail"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                maxlength="100"
+                required
+              >
+              <span class="field-error">Please enter a valid email address.</span>
+            </div>
+          </div>
+
+          <!-- Row 3: Course + Rating -->
+          <div class="form-grid-2">
+            <!-- Course/Class -->
+            <div class="form-group">
+              <label class="form-label" for="feedbackCourse">Course / Class <span>*</span></label>
+              <div class="select-wrapper">
+                <select class="form-select" id="feedbackCourse" name="course_class" required>
+                  <option value="">Select course</option>
+                  <option value="Class 6-8 Foundation">Class 6-8 Foundation</option>
+                  <option value="Class 9-10 Foundation">Class 9-10 Foundation</option>
+                  <option value="Class 11-12 Boards + Entrance">Class 11-12 Boards + Entrance</option>
+                  <option value="JEE Main">JEE Main</option>
+                  <option value="JEE Advanced">JEE Advanced</option>
+                </select>
+              </div>
+              <span class="field-error">Please select your course.</span>
+            </div>
+
+            <!-- Overall Rating -->
+            <div class="form-group">
+              <label class="form-label" for="feedbackRating">Overall Rating <span>*</span></label>
+              <div class="select-wrapper">
+                <select class="form-select" id="feedbackRating" name="rating" required>
+                  <option value="">Select rating</option>
+                  <option value="5 - Excellent">5 - Excellent</option>
+                  <option value="4 - Very Good">4 - Very Good</option>
+                  <option value="3 - Good">3 - Good</option>
+                  <option value="2 - Fair">2 - Fair</option>
+                  <option value="1 - Needs Improvement">1 - Needs Improvement</option>
+                </select>
+              </div>
+              <span class="field-error">Please select a rating.</span>
+            </div>
+          </div>
+
+          <!-- Feedback Message -->
+          <div class="form-group">
+            <div class="flex items-center justify-between mb-1">
+              <label class="form-label" for="feedbackMessage" style="margin-bottom:0;">Your Feedback <span>*</span></label>
+              <span class="char-counter" id="feedbackCharCount">0 / 600</span>
+            </div>
+            <textarea
+              class="form-textarea"
+              id="feedbackMessage"
+              name="feedback_message"
+              placeholder="Tell us about teaching quality, doubt support, test series, and your overall experience at Star Academy..."
+              rows="5"
+              minlength="20"
+              maxlength="600"
+              required
+            ></textarea>
+            <p class="field-hint">Minimum 20 characters required.</p>
+            <span class="field-error" id="feedbackMessageError">Please write at least 20 characters.</span>
+          </div>
+
+          <!-- Consent -->
+          <div class="pt-1">
+            <label class="consent-label">
+              <input
+                class="consent-box"
+                type="checkbox"
+                name="consent"
+                required
+              >
+              <span>I confirm that the information provided is correct.</span>
+            </label>
+            <span class="field-error" id="consentError" style="margin-top:6px;display:none;">Please confirm the information is correct.</span>
+          </div>
+
+          <!-- Status Message -->
+          <p class="form-status" data-form-status aria-live="polite" role="status"></p>
+
+          <!-- Submit -->
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i>
+            Submit Feedback
+          </button>
+
+          <p class="text-center text-[11px]" style="color:#475569;">
+            <i class="fas fa-lock text-[9px] mr-1"></i>
+            Your submission is secure and private. We never share your information.
+          </p>
+        </form>
+      </div><!-- /glass-card -->
+
+
+      <!-- ─── WHY YOUR FEEDBACK MATTERS ─── -->
+      <div class="mt-20 reveal reveal-delay-2">
+        <div class="text-center mb-12">
+          <span class="section-tag mb-5 inline-flex">
+            <i class="fas fa-heart text-[11px]"></i> Why It Matters
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black mt-5 mb-3" style="color:#F8FAFC;letter-spacing:-0.03em;">Why Your Feedback Matters</h2>
+          <p class="text-base mt-3 max-w-lg mx-auto leading-relaxed" style="color:#64748B;">Every response directly shapes how we teach, grow, and serve our students better.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+          <!-- Bullet 1 -->
+          <div class="why-card reveal reveal-delay-1" style="padding:28px 28px;border-radius:20px;">
+            <div class="why-icon" style="background:rgba(255,107,43,0.12);width:56px;height:56px;border-radius:16px;font-size:22px;flex-shrink:0;">
+              <i class="fas fa-chalkboard-teacher" style="color:#FF6B2B;"></i>
+            </div>
+            <div>
+              <h3 class="text-base font-bold mb-2" style="color:#F8FAFC;">Improves Teaching</h3>
+              <p class="text-sm leading-relaxed" style="color:#64748B;">Your insights help our IITian faculty refine their approach for every upcoming batch.</p>
+            </div>
+          </div>
+
+          <!-- Bullet 2 -->
+          <div class="why-card reveal reveal-delay-2" style="padding:28px 28px;border-radius:20px;">
+            <div class="why-icon" style="background:rgba(124,58,237,0.12);width:56px;height:56px;border-radius:16px;font-size:22px;flex-shrink:0;">
+              <i class="fas fa-users" style="color:#9F67FF;"></i>
+            </div>
+            <div>
+              <h3 class="text-base font-bold mb-2" style="color:#F8FAFC;">Guides Future Students</h3>
+              <p class="text-sm leading-relaxed" style="color:#64748B;">Honest reviews help new students choose Star Academy with confidence and clarity.</p>
+            </div>
+          </div>
+
+          <!-- Bullet 3 -->
+          <div class="why-card reveal reveal-delay-3" style="padding:28px 28px;border-radius:20px;">
+            <div class="why-icon" style="background:rgba(16,185,129,0.12);width:56px;height:56px;border-radius:16px;font-size:22px;flex-shrink:0;">
+              <i class="fas fa-chart-line" style="color:#10B981;"></i>
+            </div>
+            <div>
+              <h3 class="text-base font-bold mb-2" style="color:#F8FAFC;">Drives Continuous Growth</h3>
+              <p class="text-sm leading-relaxed" style="color:#64748B;">We read every submission and take real action — your voice shapes our next chapter.</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- /why-feedback -->
+
+    </div><!-- /max-w-3xl -->
+  </main>
+
+  <!-- ═══════════════════════════════════════ FOOTER ════════════ -->
+  <footer style="background: #060912; border-top: 1px solid rgba(255,255,255,0.05);" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+        <!-- Brand -->
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="logo.jpg" alt="Star Academy" class="w-10 h-10 rounded-full object-cover ring-1 ring-white/15">
+            <span class="text-lg font-bold gradient-text tracking-tight">Star Academy</span>
+          </div>
+          <p class="text-sm leading-relaxed mb-5" style="color: #64748B;">Premier coaching institute for IIT-JEE, NEET &amp; Board Exams by IITian faculty in Dashrath Puri, New Delhi.</p>
+          <div class="flex items-center gap-3">
+            <a href="https://wa.me/918102438480" aria-label="WhatsApp" class="w-8 h-8 rounded-lg flex items-center justify-center transition-all hover:scale-110" style="background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.2); color: #25D366;"><i class="fab fa-whatsapp text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-widest mb-5" style="color: #F8FAFC;">Quick Links</h4>
+          <div class="flex flex-col gap-3">
+            <a href="index.html"        class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Home</a>
+            <a href="about.html"        class="text-sm hover:text-primary transition-colors" style="color: #64748B;">About Us</a>
+            <a href="courses.html"      class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Courses</a>
+            <a href="testimonials.html" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Testimonials</a>
+            <a href="contact.html"      class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Contact Us</a>
+            <a href="feedback.html"     class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Feedback</a>
+          </div>
+        </div>
+
+        <!-- Courses -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-widest mb-5" style="color: #F8FAFC;">Our Courses</h4>
+          <div class="flex flex-col gap-3">
+            <a href="courses.html" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Foundation (Class 6–10)</a>
+            <a href="courses.html" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">IIT-JEE Coaching</a>
+            <a href="courses.html" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Board Exam Prep</a>
+            <a href="courses.html" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">Crash Courses</a>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-widest mb-5" style="color: #F8FAFC;">Contact</h4>
+          <div class="flex flex-col gap-4">
+            <div class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-primary text-xs mt-1"></i>
+              <span class="text-sm leading-relaxed" style="color: #64748B;">A-12, shop no-3, Gali no-1, Dasrath Puri near Shani Mandir, New Delhi-110045</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-phone-alt text-primary text-xs"></i>
+              <a href="tel:+918102438480" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">+91 81024 38480</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-envelope text-primary text-xs"></i>
+              <a href="mailto:swetakumari018@gmail.com" class="text-sm hover:text-primary transition-colors" style="color: #64748B;">swetakumari018@gmail.com</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-clock text-primary text-xs"></i>
+              <span class="text-sm" style="color: #64748B;">Mon–Sat: 9:00 AM – 9:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div><!-- /grid -->
+
+      <div class="mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3" style="border-top: 1px solid rgba(255,255,255,0.05);">
+        <p class="text-xs" style="color: #475569;">Copyright &copy; <span class="current-year"></span> Star Academy. All rights reserved.</p>
+        <p class="text-xs" style="color: #334155;">Developed by Aditya Kumar &bull; <a href="https://staracademy.co.in" class="hover:text-primary transition-colors">staracademy.co.in</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/918102438480" class="floating-whatsapp" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up text-sm"></i></button>
+
+  <!-- Mobile CTA Bar -->
+  <div class="mobile-cta-bar">
+    <a href="https://forms.gle/t7oCHNZKW5ewT1hp7" target="_blank" rel="noopener noreferrer" class="mobile-cta-btn mobile-cta-btn-primary"><i class="fas fa-graduation-cap"></i> Enroll Now</a>
+    <a href="tel:+918102438480" class="mobile-cta-btn mobile-cta-btn-secondary"><i class="fas fa-phone-alt"></i> Call Now</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════ SCRIPTS ════════════ -->
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="enroll.js"></script>
+
+  <script>
+    /* ── Inline page-specific enhancements ── */
+
+    // Current year
+    document.querySelectorAll('.current-year').forEach(el => el.textContent = new Date().getFullYear());
+
+    // ── Scroll Progress ──
+    window.addEventListener('scroll', () => {
+      const prog = document.querySelector('.scroll-progress');
+      if (prog) {
+        const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        prog.style.width = pct + '%';
+      }
+    }, { passive: true });
+
+    // ── Navbar Scroll ──
+    const navbar = document.querySelector('[data-navbar]');
+    if (navbar) {
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+      }, { passive: true });
+    }
+
+    // ── Hamburger / Mobile Nav ──
+    const hamburger = document.querySelector('.hamburger');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (hamburger && mobileNav) {
+      hamburger.addEventListener('click', () => {
+        const open = hamburger.classList.toggle('open');
+        mobileNav.classList.toggle('open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      mobileNav.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('click', () => {
+          hamburger.classList.remove('open');
+          mobileNav.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    // ── Back to Top ──
+    const btt = document.querySelector('.back-to-top');
+    if (btt) {
+      window.addEventListener('scroll', () => {
+        btt.classList.toggle('visible', window.scrollY > 400);
+      }, { passive: true });
+      btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    // ── Notification Banner Dismiss ──
+    const bannerClose = document.querySelector('.notification-banner-close');
+    const banner = document.querySelector('.notification-banner');
+    if (bannerClose && banner) {
+      bannerClose.addEventListener('click', () => {
+        banner.style.transform = 'translateY(-110%)';
+        banner.setAttribute('aria-hidden', 'true');
+        setTimeout(() => {
+          banner.classList.add('hidden');
+          document.body.classList.add('banner-dismissed');
+          document.documentElement.style.setProperty('--announcement-height', '0px');
+        }, 420);
+      });
+    }
+
+    // ── Reveal on Scroll ──
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal, .reveal-left').forEach(el => revealObserver.observe(el));
+
+    // ── Character Counter ──
+    const textarea = document.getElementById('feedbackMessage');
+    const charCount = document.getElementById('feedbackCharCount');
+    if (textarea && charCount) {
+      textarea.addEventListener('input', () => {
+        const len = textarea.value.length;
+        charCount.textContent = len + ' / 600';
+        charCount.className = 'char-counter';
+        if (len >= 540) charCount.classList.add('limit');
+        else if (len >= 480) charCount.classList.add('warn');
+      });
+    }
+
+    // ── Enroll CTAs are globally handled in enroll.js ──
+
+    // ── Live input validation styling ──
+    document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(field => {
+      field.addEventListener('blur', () => {
+        if (field.value.trim() !== '') {
+          field.classList.toggle('is-valid',   field.validity.valid);
+          field.classList.toggle('is-invalid', !field.validity.valid);
+        }
+      });
+      field.addEventListener('input', () => {
+        if (field.classList.contains('is-invalid') && field.validity.valid) {
+          field.classList.remove('is-invalid');
+          field.classList.add('is-valid');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

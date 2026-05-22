@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://staracademy.co.in/sitemap.xml
+
+# Star Academy - Best Coaching Institute in Dashrath Puri, New Delhi
+# Website: https://staracademy.co.in
