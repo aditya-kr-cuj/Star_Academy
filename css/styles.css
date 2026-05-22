@@ -567,18 +567,7 @@ body.banner-dismissed .notification-banner {
   - object-position: center → perfectly centred in the frame
   - background on .hero-slider fills any residual letter-box bars
 */
-.hero-slide img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  object-position: center center;
-  display: block;
-  vertical-align: bottom;
-  /* Prevent sub-pixel rendering artefacts */
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-}
+
 
 /* Navigation dots */
 .hero-slider-dots {
